@@ -1,0 +1,50 @@
+<h3>Registrar Persona</h3>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="tipoidentificacion">Tipo identificación</label>
+                    <select #idTipoIdentificacion required>
+                        <option value="1">Cédula de ciudadanía</option>
+                        <option value="2">Tarjeta de identidad</option>
+                        <option value="3">Registro Civil</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <label for="identificacion">Número identificación</label>
+                    <input #numeroIdentificacion type="number" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombres">Nombres</label>
+                    <input #nombres type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input #apellidos type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input #telefono type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input #direccion type="text" class="form-control"required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input #correo type="text" class="form-control" required>
+                </div>
+
+                <button (click)="save(idTipoIdentificacion.value, 
+                                        numeroIdentificacion.valueAsNumber,
+                                        nombres.value,
+                                        apellidos.value,
+                                        telefono.value,
+                                        direccion.value,
+                                        correo.value)" class="btn btn-info">Guardar</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<h3>Registrar Trámite</h3>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="identificacion">Número radicado</label>
+                    <input #numeroRadicado type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombres">Nombre trámite</label>
+                    <input #nombre type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input #descripcion type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="depedencia">Persona</label>
+                    <select #idPersona required >
+                        <option [value]="persona.id" *ngFor="let persona of personas">{{persona.nombres + " " + persona.apellidos }} ></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="depedencia">Empleado</label>
+                    <select #idEmpleado required >
+                        <option [value]="empleado.id" *ngFor="let empleado of empleados">{{empleado.nombres + " " + empleado.apellidos }} ></option>
+                    </select>
+                </div>
+
+                <button (click)="save(numeroRadicado.value,
+                                        nombre.value,
+                                        descripcion.value,
+                                        +idPersona.value,
+                                        +idEmpleado.value)" class="btn btn-info">Guardar</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

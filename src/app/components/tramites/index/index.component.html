@@ -1,0 +1,21 @@
+<h3>Trámites</h3>
+<div class="container">
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>Número radicado</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tramite of tramites" class="text-center">
+                        <th>{{tramite.numeroRadicado}}</th>
+                        <th>{{tramite.nombre}}</th>
+                        <th>{{tramite.descripcion}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
